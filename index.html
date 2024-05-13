@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentoss com Teclado</title>
+    <script src="gamesWeb.js"></script>
+    </head><body>
+        <canvas id="canv" width="800" height="700">
+            Este browser não suporta o objeto canvas do  HTMLS.
+            </canvas>
+        <script>
+            canvas = document.getElementedById("canv");
+            ctx = canvas.getContext ("2d");
+            nave = new Image();
+            nave.src = "img/nave.png";
+            x = 400 - nave.width/2;
+            nave.onload = function() {
+                ctx.drawimage(nave, x, 700-160);
+                }
+            document.addEventListener("keydown"),
+                function(evento){
+                    movimentaNaveTeclado(evento.KeyCode);
+                    };
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
